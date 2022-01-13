@@ -1,0 +1,130 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 20, 20);
+}
+
+.contenedor {
+    width: 1000px;
+    height: 400px;
+    background-image: url(../img/fondo.jpg);
+    background-size: 1000px 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.silueta {
+    width: 70px;
+    height: 120px;
+    position: absolute;
+    top: 290px;
+    left: 200px;
+    background-image: url(../img/perfil.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.saltar {
+    animation: saltar 1.5s linear 1;
+}
+
+.morir {
+    animation: morir 3.5s linear 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes morir {
+    0% {
+        top: 290px;
+    }
+    100% {
+        top: -100px;
+    }
+}
+
+@keyframes saltar {
+    0% {
+        top: 290px;
+    }
+    50% {
+        top: 50px;
+    }
+    70% {
+        top: 50px;
+    }
+    100% {
+        top: 290px;
+    }
+}
+
+.obtaculo {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    right: -200px;
+    background-image: url(../img/carro.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: animacion 3.5s linear infinite;
+}
+
+@keyframes animacion {
+    100% {
+        right: 1100px;
+    }
+}
+
+.time {
+    font-size: 28px;
+    position: absolute;
+    top: 2.2em;
+    left: 1.5em;
+    color: #fac806;
+    font-weight: 800;
+}
+
+.scoreConten {
+    width: 25%;
+    position: absolute;
+    top: 27%;
+    left: 35%;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+}
+
+.img-game-over {
+    width: 100%;
+    height: auto;
+    /* position: absolute;
+    top: -2em;
+    left: 0em; */
+    transform: scale(1.5);
+}
+
+.scoreConten p {
+    position: absolute;
+    top: -1em;
+    left: -1.5em;
+    width: 50%;
+}
+
+#score {
+    position: absolute;
+    left: 8.3em;
+    top: 0.5em;
+}
